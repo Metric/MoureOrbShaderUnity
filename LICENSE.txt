@@ -1,0 +1,35 @@
+/*
+Copyright(c) 2015 Konstantinos Mourelas
+
+zlib Licence
+
+This software is provided 'as-is', without any express or implied
+warranty.In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions :
+
+1. The origin of this software must not be misrepresented; you must not
+claim that you wrote the original software.If you use this software
+in a product, an acknowledgment in the product documentation would be
+appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not be
+misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source
+distribution.
+*/
+
+/* 
+ * Modified by metric / arcanistry
+ * 1. Updated to use proper floats for full precision of textures and colors etc.
+ *   - This is important for VR headsets especially when it comes to colors / textures.
+ * 2. _LineCol is now properly applied. It was being multiplied in the original source
+ *   - rather than added. The _LineCol alpha is used as the add power for the _LineCol.rgb: 0 alpha = nothing; 1 alpha = pure white.
+ * 3. Added _Shape which acts as an overall shape mask. 
+ *	- Since, with this material on the UI element, you cannot specify an actual sprite to use as a mask.
+ *	- With this you can specify the overall general shape, rather than just a single sphere, rounded square, or square.
+ */
